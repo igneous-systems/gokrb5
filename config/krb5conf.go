@@ -87,7 +87,7 @@ func newLibDefaults() *LibDefaults {
 	opts := asn1.BitString{}
 	opts.Bytes, _ = hex.DecodeString("00000010")
 	opts.BitLength = len(opts.Bytes) * 8
-	return &LibDefaults{
+	l := &LibDefaults{
 		CCacheType:              4,
 		Clockskew:               time.Duration(300) * time.Second,
 		DefaultClientKeytabName: fmt.Sprintf("/usr/local/var/krb5/user/%v/client.keytab", usr.Uid),
@@ -107,6 +107,10 @@ func newLibDefaults() *LibDefaults {
 		TicketLifetime:     time.Duration(24) * time.Hour,
 		UDPPreferenceLimit: 1465,
 	}
+	l.DefaultTGSEnctypeIDs = parseETypes(l.DefaultTGSEnctypes, l.AllowWeakCrypto)
+	l.DefaultTktEnctypeIDs = parseETypes(l.DefaultTktEnctypes, l.AllowWeakCrypto)
+	l.PermittedEnctypeIDs = parseETypes(l.PermittedEnctypes, l.AllowWeakCrypto)
+	return l
 }
 
 // Parse the lines of the [libdefaults] section of the configuration into the LibDefaults struct.
