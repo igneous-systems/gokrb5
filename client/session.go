@@ -138,3 +138,25 @@ func (cl *Client) GetSessionFromPrincipalName(spn types.PrincipalName) (*session
 	realm := cl.Config.ResolveRealm(spn.NameString[len(spn.NameString)-1])
 	return cl.GetSessionFromRealm(realm)
 }
+
+func (cl *Client) GetCIFSSessionFromPrincipalName(cifsserver string) (*session, error) {
+	spn := types.PrincipalName{
+		NameType:   nametype.KRB_NT_SRV_INST,
+		NameString: []string{"cifs", cifsserver},
+	}
+
+	cl.sessions.mux.RLock()
+	sess, ok := cl.sessions.Entries[cl.Credentials.Realm]
+	cl.sessions.mux.RUnlock()
+	if !ok {
+		return nil, fmt.Errorf("client does not have a session for realm %s, login first", cl.Credentials.Realm)
+	}
+	_, tgsRep, err := cl.TGSExchange(spn, cl.Credentials.Realm, sess.TGT, sess.SessionKey, false, 0)
+	if err != nil {
+		return nil, err
+	}
+	cl.AddSession(tgsRep.Ticket, tgsRep.DecryptedEncPart)
+	cl.sessions.mux.RLock()
+	defer cl.sessions.mux.RUnlock()
+	return cl.sessions.Entries[spn.NameString[1]], nil
+}
