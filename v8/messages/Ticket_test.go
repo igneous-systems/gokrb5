@@ -8,14 +8,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jcmturner/gokrb5/v8/iana"
-	"github.com/jcmturner/gokrb5/v8/iana/addrtype"
-	"github.com/jcmturner/gokrb5/v8/iana/adtype"
-	"github.com/jcmturner/gokrb5/v8/iana/nametype"
-	"github.com/jcmturner/gokrb5/v8/iana/trtype"
-	"github.com/jcmturner/gokrb5/v8/keytab"
-	"github.com/jcmturner/gokrb5/v8/test/testdata"
-	"github.com/jcmturner/gokrb5/v8/types"
+	"github.com/igneous-systems/gokrb5/v8/iana"
+	"github.com/igneous-systems/gokrb5/v8/iana/addrtype"
+	"github.com/igneous-systems/gokrb5/v8/iana/adtype"
+	"github.com/igneous-systems/gokrb5/v8/iana/nametype"
+	"github.com/igneous-systems/gokrb5/v8/iana/trtype"
+	"github.com/igneous-systems/gokrb5/v8/keytab"
+	"github.com/igneous-systems/gokrb5/v8/test/testdata"
+	"github.com/igneous-systems/gokrb5/v8/types"
 	"github.com/stretchr/testify/assert"
 )
 

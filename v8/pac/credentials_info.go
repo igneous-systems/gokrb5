@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/jcmturner/gokrb5/v8/crypto"
-	"github.com/jcmturner/gokrb5/v8/iana/keyusage"
-	"github.com/jcmturner/gokrb5/v8/types"
+	"github.com/igneous-systems/gokrb5/v8/crypto"
+	"github.com/igneous-systems/gokrb5/v8/iana/keyusage"
+	"github.com/igneous-systems/gokrb5/v8/types"
 	"github.com/jcmturner/rpc/v2/mstypes"
 	"github.com/jcmturner/rpc/v2/ndr"
 )

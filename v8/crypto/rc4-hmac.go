@@ -7,10 +7,10 @@ import (
 	"hash"
 	"io"
 
-	"github.com/jcmturner/gokrb5/v8/crypto/rfc3961"
-	"github.com/jcmturner/gokrb5/v8/crypto/rfc4757"
-	"github.com/jcmturner/gokrb5/v8/iana/chksumtype"
-	"github.com/jcmturner/gokrb5/v8/iana/etypeID"
+	"github.com/igneous-systems/gokrb5/v8/crypto/rfc3961"
+	"github.com/igneous-systems/gokrb5/v8/crypto/rfc4757"
+	"github.com/igneous-systems/gokrb5/v8/iana/chksumtype"
+	"github.com/igneous-systems/gokrb5/v8/iana/etypeID"
 	"golang.org/x/crypto/md4"
 )
 

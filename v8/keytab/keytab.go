@@ -12,7 +12,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/jcmturner/gokrb5/v8/types"
+	"github.com/igneous-systems/gokrb5/v8/types"
 )
 
 const (

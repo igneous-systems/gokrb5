@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/jcmturner/gofork/encoding/asn1"
+	"github.com/igneous-systems/gofork/encoding/asn1"
 	"github.com/stretchr/testify/assert"
 )
 
