@@ -8,6 +8,8 @@ github.com/hashicorp/go-uuid v1.0.2 h1:cfejS+Tpcp13yd5nYHWDI6qVCny6wyX2Mt5SGur2I
 github.com/hashicorp/go-uuid v1.0.2/go.mod h1:6SBZvOh/SIDV7/2o3Jml5SYk/TvGqwFJ/bN7x4byOro=
 github.com/igneous-systems/gofork v1.0.0 h1:5CzXsc9o/4tUQvNKRLrVqrhz+HgB9wJeKSQWrXKENTw=
 github.com/igneous-systems/gofork v1.0.0/go.mod h1:UkyvzNejqHMbCcYbbWxSi/fQWBs2VKA1jYq5RQ8mWj0=
+github.com/igneous-systems/gofork v1.0.1 h1:evbd2sR3FrJZ01wW450STpx6hVCku1Ou51wHmoCddLI=
+github.com/igneous-systems/gofork v1.0.1/go.mod h1:UkyvzNejqHMbCcYbbWxSi/fQWBs2VKA1jYq5RQ8mWj0=
 github.com/jcmturner/aescts/v2 v2.0.0 h1:9YKLH6ey7H4eDBXW8khjYslgyqG2xZikXP0EQFKrle8=
 github.com/jcmturner/aescts/v2 v2.0.0/go.mod h1:AiaICIRyfYg35RUkr8yESTqvSy7csK90qZ5xfvvsoNs=
 github.com/jcmturner/dnsutils/v2 v2.0.0 h1:lltnkeZGL0wILNvrNiVCR6Ro5PGU/SeBvVO/8c/iPbo=
